@@ -19,15 +19,3 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //list all Messages
 Route::get('messages', 'MessagesController@index')->name('allMessages');
-
-//list single Message
-Route::get('messages/{id}', 'MessagesController@show')->name('singleMessage');
-
-//create new Message
-Route::post('message', 'MessagesController@store')->name('saveMessage');
-
-//update Messages
-Route::put('message/{id}', 'MessagesController@store')->name('updateMessages');
-
-//delete Messages
-Route::post('messages/{id}', 'MessagesController@destroy')->name('allMessages');

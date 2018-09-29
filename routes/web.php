@@ -33,3 +33,18 @@ use App\Http\Resources\MessagesCollection;
 Route::get('/messages', function () {
     return new MessagesCollection(Messages::all());
 });
+
+//list all Messages
+Route::get('messages', 'MessagesController@index')->name('allMessages');
+
+//list single Message
+Route::get('messages/{id}', 'MessagesController@show')->name('singleMessage');
+
+//create new Message
+Route::post('message', 'MessagesController@store')->name('saveMessage');
+
+//update Messages
+Route::put('message/{id}', 'MessagesController@store')->name('updateMessages');
+
+//delete Messages
+Route::delete('messages/{id}', 'MessagesController@destroy')->name('allMessages');

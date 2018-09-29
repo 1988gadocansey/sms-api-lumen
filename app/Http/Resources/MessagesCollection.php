@@ -15,17 +15,19 @@ class MessagesCollection extends JsonResource
 {
     public function toArray($request)
     {
-        return [
-        'id' => $this->id,
-        'date' => $this->date,
-        'message' => $this->message,
-        'phone_number' => $this->phone_number,
-        'status' => $this->status,
-        'type' => $this->type,
-        'sent_by' => $this->sent_by,
-        'semester' => $this->semester,
-        'year' => $this->year,
-        'receipient' => $this->receipient,
-    ];
+        return parent::toArray($request);
+
+//        return [
+//        'id' => $this->id,
+//        'date' => $this->date,
+//        'message_body' => $this->message_body,
+//        'phone_number' => $this->phone_number,
+//        'status' => $this->status,
+//        'type' => $this->type,
+//        'sent_by' => $this->sent_by,
+//        'semester' => $this->semester,
+//        'year' => $this->year,
+//        'name' => $this->name,
+//    ];
     }
 }

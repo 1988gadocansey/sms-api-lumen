@@ -19,10 +19,10 @@ class CreateMessagesTable extends Migration
             $table->string('date');
             $table->string('type');
             $table->string('year');
-            $table->string('term');
+            $table->string('semester');
             $table->string('status');
             $table->string('sent_by');
-            $table->string('phone');
+            $table->string('phone_number');
             $table->string('name');
             $table->timestamps();
         });
