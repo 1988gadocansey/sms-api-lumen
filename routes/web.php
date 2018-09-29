@@ -30,15 +30,15 @@ $router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($ro
 use App\Messages;
 use App\Http\Resources\MessagesCollection;
 
-Route::get('/messages', function () {
-    return new MessagesCollection(Messages::all());
-});
+//Route::get('/messages', function () {
+//    return new MessagesCollection(Messages::all());
+//});
 
 //list all Messages
 Route::get('messages', 'MessagesController@index')->name('allMessages');
 
 //list single Message
-Route::get('messages/{id}', 'MessagesController@show')->name('singleMessage');
+Route::get('message/{id}', 'MessagesController@show')->name('singleMessage');
 
 //create new Message
 Route::post('message', 'MessagesController@store')->name('saveMessage');
@@ -47,4 +47,4 @@ Route::post('message', 'MessagesController@store')->name('saveMessage');
 Route::put('message/{id}', 'MessagesController@store')->name('updateMessages');
 
 //delete Messages
-Route::delete('messages/{id}', 'MessagesController@destroy')->name('allMessages');
+Route::delete('message/{id}', 'MessagesController@destroy')->name('allMessages');

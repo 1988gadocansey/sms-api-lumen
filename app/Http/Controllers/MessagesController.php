@@ -38,6 +38,7 @@ class MessagesController extends Controller
     {
         $message = $request->isMethod('put')? Messages::findOrFail($request->id): new Messages;
 
+        $message->id = $request->input('id');
         $message->date = \DB::raw("NOW()");
         $message->message_body = $request->input('message_body');
         $message->phone_number = $request->input('phone_number');
