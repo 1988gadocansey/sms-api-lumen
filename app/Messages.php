@@ -12,5 +12,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Messages extends model
 {
-    protected $table = "message";
+    protected $table = "messages";
 }
