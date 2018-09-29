@@ -26,3 +26,10 @@ $router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($ro
 
   $router->put('authors/{id}', ['uses' => 'AuthorController@update']);
 });
+
+use App\Messages;
+use App\Http\Resources\MessagesCollection;
+
+Route::get('/messages', function () {
+    return new MessagesCollection(Messages::all());
+});
